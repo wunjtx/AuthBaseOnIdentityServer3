@@ -1,0 +1,16 @@
+﻿@model IEnumerable<System.Security.Claims.Claim>
+@{
+    ViewBag.Title = "UserInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UserInfo</h2>
+
+<dl>
+    @foreach (var claim in Model)
+    {
+        <dt>@claim.Type</dt>
+        <dt>@claim.Value</dt>
+    }
+</dl>
+
